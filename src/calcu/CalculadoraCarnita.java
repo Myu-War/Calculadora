@@ -25,7 +25,7 @@ public class CalculadoraCarnita {
 
     public double evaluaPostFijo(String operacion) throws Unchecked {
         miPila calculadorita = new miPila();
-        double resultado = 0, numero1 = 0, numero2 = 0;
+         double resultado = 0, numero1 = 0, numero2 = 0;
         char operador;
         String lector;
         Scanner sc = new Scanner(operacion);
@@ -33,7 +33,7 @@ public class CalculadoraCarnita {
         while (sc.hasNext()) {
             lector = sc.next();
             operador = lector.charAt(0);
-            if (operador != '/' && operador != '*' && operador != '-' && operador != '+' || lector.length()>=2) {
+            if (operador != '/' && operador != '*' && operador != '─' && operador != '+' ) {
                 calculadorita.push(Double.parseDouble(lector));
             } else {
                 if (calculadorita.isEmpty()) {
@@ -52,7 +52,7 @@ public class CalculadoraCarnita {
                     case '*':
                         resultado = numero1 * numero2;
                         break;
-                    case '-':
+                    case '─':
                         resultado = numero1 - numero2;
                         break;
                     case '+':
@@ -118,7 +118,7 @@ public class CalculadoraCarnita {
     }
 
     static boolean isOperator(String token) {
-        return (token.equals("+") || token.equals("-")
+        return (token.equals("+") || token.equals("─")
                 || token.equals("*") || token.equals("/"));
     }
 
@@ -133,8 +133,9 @@ public class CalculadoraCarnita {
 
     public static void main(String[] args) {
         CalculadoraCarnita calcu = new CalculadoraCarnita();
-        String operador = calcu.infijoAPostfijo("9 / 3 + -3");
+        String operador = calcu.infijoAPostfijo("3 ─ -2");
 
+        System.out.print("\n"+operador);
         System.out.print("\n" + calcu.evaluaPostFijo(operador) + "\n" + "\n");
     }
 }
