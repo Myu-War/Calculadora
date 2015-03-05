@@ -65,7 +65,6 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         BotonParentClose = new javax.swing.JButton();
         BotonParentOpen = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
@@ -212,13 +211,6 @@ public class CalculadoraGUI extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Espacio");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setText(".");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,78 +230,78 @@ public class CalculadoraGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(Boton1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(Boton0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 42, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(BotonIgual, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(4, 4, 4))
-            .add(layout.createSequentialGroup()
+                .add(2, 2, 2)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jTextField7)
                     .add(layout.createSequentialGroup()
-                        .add(2, 2, 2)
-                        .add(Boton7)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(Boton8))
-                    .add(BotonParentOpen)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, BotonDelete, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jTextField7))
-            .add(layout.createSequentialGroup()
-                .add(Boton4)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(BotonParentClose)
-                    .add(layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(Boton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(Boton2))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(layout.createSequentialGroup()
-                                .add(Boton6)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(BotonMultiplica))
-                            .add(layout.createSequentialGroup()
-                                .add(Boton3)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(BotonMas)))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(BotonDivide, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 41, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(BotonResta)))
-                    .add(layout.createSequentialGroup()
-                        .add(51, 51, 51)
-                        .add(Boton9)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jButton4)))
-                .add(0, 0, Short.MAX_VALUE))
+                                .add(2, 2, 2)
+                                .add(Boton7)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(Boton8))
+                            .add(BotonParentOpen)
+                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                .add(layout.createSequentialGroup()
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(Boton1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .add(Boton0))
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 42, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(jButton4)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(BotonIgual, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
+                                    .add(Boton4)
+                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(layout.createSequentialGroup()
+                                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                                .add(Boton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .add(Boton2))
+                                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                                .add(layout.createSequentialGroup()
+                                                    .add(Boton6)
+                                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                                    .add(BotonMultiplica))
+                                                .add(layout.createSequentialGroup()
+                                                    .add(Boton3)
+                                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                                    .add(BotonMas)))
+                                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                                .add(BotonDivide, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 41, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .add(BotonResta)))
+                                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                                            .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
+                                                .add(BotonParentClose)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                                .add(jButton1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
+                                                .add(51, 51, 51)
+                                                .add(Boton9)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                                .add(BotonDelete, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))))
+                        .add(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(jButton1)
-                        .add(28, 28, 28)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(BotonParentClose)
-                            .add(BotonParentOpen)))
-                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 74, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(BotonDelete)))
+                .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 23, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(BotonParentClose)
+                    .add(BotonParentOpen)
+                    .add(jButton1))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(Boton7)
                     .add(Boton8)
                     .add(Boton9)
-                    .add(jButton4))
+                    .add(BotonDelete))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(Boton4)
@@ -327,9 +319,10 @@ public class CalculadoraGUI extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(Boton0)
-                    .add(jButton2)
                     .add(BotonIgual)
-                    .add(jButton3)))
+                    .add(jButton3)
+                    .add(jButton4))
+                .add(22, 22, 22))
         );
 
         pack();
@@ -452,11 +445,6 @@ public class CalculadoraGUI extends javax.swing.JFrame {
        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        numCalcu.append(" ");
-        jTextField7.setText(numCalcu.toString());
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         numCalcu.append(".");
         jTextField7.setText(numCalcu.toString());
@@ -529,7 +517,6 @@ public class CalculadoraGUI extends javax.swing.JFrame {
     private javax.swing.JButton BotonParentOpen;
     private javax.swing.JButton BotonResta;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JTextField jTextField7;

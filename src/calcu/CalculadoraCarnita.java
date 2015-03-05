@@ -69,38 +69,42 @@ public class CalculadoraCarnita {
     }
 
     public String infijoAPostfijo(String expr) {
-        StringBuilder postfix = new StringBuilder();
+        StringBuilder postfix = new StringBuilder(),creadorNumeros=new StringBuilder();
         String token;
         Scanner sc;
         miPila pila = new miPila();
 
         if (pila.evaluaParentesis(expr)) {
-
-            sc = new Scanner(expr);
-
             try {
-                while (sc.hasNext()) {
-                    token = sc.next();
+                for(int i=0;i<expr.length();i++) {
+                    token = expr.charAt(i)+"";
                     if (isOperator(token)) {
+                        postfix.append(" "+creadorNumeros);
                         while (!pila.isEmpty()
                                 && !pila.peek().equals("(")
                                 && opGreaterEqual((String) pila.peek(), token)) {
                             postfix.append(" " + pila.pop());
                         }
                         pila.push(token);
+                        creadorNumeros=new StringBuilder();
                     } else if (token.equals("(")) {
                         pila.push(token);
+                        creadorNumeros=new StringBuilder();
                     } else if (token.equals(")")) {
                         while (!(pila.peek().equals("("))) {
                             postfix.append(" " + pila.pop());
                         }
                         pila.pop(); // paréntesis que abre correspondiente
+                        creadorNumeros=new StringBuilder();
                     } else // token is operand
-                    {
-                        postfix.append(" " + token);
+                    {   
+                        creadorNumeros.append(token);
+                    }
+                    if(i==expr.length()-1){
+                       postfix.append(" "+creadorNumeros); 
                     }
                 }
-
+                
                 while (!pila.isEmpty()) {
                     postfix.append(" " + pila.pop());
                 }
@@ -125,15 +129,25 @@ public class CalculadoraCarnita {
     private static boolean opGreaterEqual(String tope, String actual) {
         boolean result = false;
         if ((tope.equals("*") || tope.equals("/"))
-                && (actual.equals("+") || actual.equals("-"))) {
+                && (actual.equals("+") || actual.equals("─"))) {
             result = true;
         }
         return result;
     }
+    
+    public static boolean isNumber(String n){
+        try{
+            Integer.parseInt(n);
+            return true;
+        }
+        catch(NumberFormatException nfe){
+            return false;
+        }
+    }
 
     public static void main(String[] args) {
         CalculadoraCarnita calcu = new CalculadoraCarnita();
-        String operador = calcu.infijoAPostfijo("3 ─ -2");
+        String operador = calcu.infijoAPostfijo("3855─-263");
 
         System.out.print("\n"+operador);
         System.out.print("\n" + calcu.evaluaPostFijo(operador) + "\n" + "\n");
